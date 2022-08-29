@@ -7,9 +7,9 @@
     <title>Portafolio</title>
     </head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">                                                                                                                                                          
-    
-<body>
+    <link rel="stylesheet" href="/CSS/style2.css">        
+                                                                                                                                                      
+    <body>
     <nav>
 
         <ul id="topMenu">
@@ -75,36 +75,7 @@
         <div class="projetos">
             <div class="projetos-margin">
                 <h5>Projetos</h5>
-                <div class="carts">
-                    <div class="projeto">
-                        <div class="img-projetos"></div>
-                        <h6>Titulo</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="buttons">
-                            <button>Repositorio</button>
-                            <button>Ver demo</button>
-                        </div>
-                    </div>
-                    <div class="projeto">
-                        <div class="img-projetos"></div>
-                        <h6>Titulo</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="buttons">
-                            <button>Repositorio</button>
-                            <button>Ver demo</button>
-                        </div>
-                    </div>
-
-                    <div class="projeto">
-                        <div class="img-projetos"></div>
-                        <h6>Titulo</h6>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        <div class="buttons">
-                            <button>Repositorio</button>
-                            <button>Ver demo</button>
-                        </div>
-                    </div>
-
+                <div class="carts" id="carts">
                 </div>
             </div>
         </div>
@@ -133,32 +104,37 @@
                             </ul>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <label for="name">Nome</label>
-                        <input type="text" id="name">
-                    </div>
+                
+                <form id="form-contact" action="#">
+                    <div class="form">
+                        <div>
+                          <label for="name" >Nome</label>
+                          <input type="text" id="name" name="name" required><span class="barra"></span>
+                        </div>
+                    
+                        <div>
+                          <label for="email">E-mail</label>
+                          <input type="email" id="email"><span class="barra"></span>
+                        </div>
+   
+                        <div>
+                          <label for="assunto">Assunto</label>
+                          <input type="text" id="assunto"><span class="barra"></span>
+                        
+                        </div>
 
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email">
+                        <div>
+                          <label for="textarea">Mensagem</label>
+                          <textarea name="textarea" id="message"></textarea><span class="barra"></span>
+                        
+                        </div>
                     </div>
-
                     <div>
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto">
+                        <button type="submit">Enviar</button>
+                            <p class="warnings" id="warnings"></p>
+                        </p>
                     </div>
-
-                    <div>
-                        <label for="textarea">Mensagem</label>
-                        <textarea name="textarea" id="textarea"></textarea>
-                    </div>
-
-                    <div>
-                        <button>Enviar</button>
-                    </div>
-
-                </div>
+                </form>
 
             </div>
         </div>
@@ -170,7 +146,8 @@
 
     </div>
 
-
+<script src="/js/validate.js"></script>
+<script src="/js/apiRepos.js"></script>
 </body>
 
 </html>
